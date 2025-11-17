@@ -1,4 +1,4 @@
-// contacto.js - ahora usa Leaflet Routing Machine para generar una ruta real
+
 document.addEventListener('DOMContentLoaded', () => {
   const businessLatLng = [37.9922, -1.1307]; // Murcia
   const map = L.map('map').setView(businessLatLng, 13);
