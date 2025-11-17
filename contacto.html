@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Empresa inventada - Contacto</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <style>
+    #map { height: 400px; width: 100%; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Empresa inventada</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="galeria.html">Galería</a>
+      <a href="presupuesto.html">Presupuesto</a>
+      <a href="contacto.html" class="active">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <h1>Contacto</h1>
+      <p>Dirección: Calle Falsa 123, Murcia.</p>
+
+      <div id="map" aria-label="Mapa con ubicación"></div>
+
+      <p>Calcula la ruta desde tu ubicación (se solicitará permiso al navegador).</p>
+      <button id="routeBtn">Calcular ruta desde mi ubicación</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>Dirección: Calle Falsa 123, Murcia</div>
+    <div>© Empresa inventada</div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/contacto.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Empresa inventada - Presupuesto</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Empresa inventada</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="galeria.html">Galería</a>
+      <a href="presupuesto.html" class="active">Presupuesto</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <h1>Calcula tu presupuesto</h1>
+
+      <form id="budget-form" novalidate>
+        <fieldset>
+          <legend>Datos de contacto</legend>
+          <label>Nombre: <input type="text" id="nombre" maxlength="15" required></label>
+          <label>Apellidos: <input type="text" id="apellidos" maxlength="40" required></label>
+          <label>Teléfono: <input type="tel" id="telefono" maxlength="9" required></label>
+          <label>Email: <input type="email" id="email" required></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Presupuesto</legend>
+          <label>Producto:
+            <select id="producto">
+              <option value="100">Web Básica - 100€</option>
+              <option value="250">Tienda Online - 250€</option>
+              <option value="400">Sitio Corporativo - 400€</option>
+            </select>
+          </label>
+
+          <label>Plazo (meses): <input type="number" id="plazo" min="1" value="1"></label>
+
+          <div class="extras">
+            <label><input type="checkbox" class="extra" value="20"> Hosting (+20€)</label>
+            <label><input type="checkbox" class="extra" value="50"> Mantenimiento (+50€)</label>
+            <label><input type="checkbox" class="extra" value="30"> SEO básico (+30€)</label>
+          </div>
+
+          <label>Presupuesto final: <output id="presupuesto">—</output> €</label>
+
+          <label><input type="checkbox" id="acepto"> Acepto las condiciones</label>
+
+          <div class="buttons">
+            <button type="submit">Enviar</button>
+            <button type="reset" id="resetBtn">Reset</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <div id="form-messages" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>Dirección: Calle Falsa 123, Murcia</div>
+    <div>© Empresa inventada</div>
+  </footer>
+
+  <script src="js/presupuesto.js"></script>
+</body>
+</html>

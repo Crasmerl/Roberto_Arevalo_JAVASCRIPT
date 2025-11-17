@@ -1,0 +1,14 @@
+{
+  "articles": [
+    {
+      "title": "Nueva oficina en Murcia",
+      "summary": "Ahora estamos ubicados en Murcia.",
+      "date": "2025-11-01"
+    },
+    {
+      "title": "Actualización de servicios",
+      "summary": "Mejoras en nuestros planes web.",
+      "date": "2025-11-10"
+    }
+  ]
+}
