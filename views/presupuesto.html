@@ -19,53 +19,111 @@
 
   <main>
     <section class="section">
-      <h1>Calcula tu presupuesto</h1>
+      <h1>Solicita tu presupuesto</h1>
+      <p>Completa el formulario y te enviaremos un presupuesto personalizado.</p>
+    </section>
 
-      <form id="budget-form" novalidate>
+    <section class="section">
+      <form id="budget-form">
         <fieldset>
-          <legend>Datos de contacto</legend>
-          <label>Nombre: <input type="text" id="nombre" maxlength="15" required></label>
-          <label>Apellidos: <input type="text" id="apellidos" maxlength="40" required></label>
-          <label>Teléfono: <input type="tel" id="telefono" maxlength="9" required></label>
-          <label>Email: <input type="email" id="email" required></label>
+          <legend>Datos personales</legend>
+          
+          <label>
+            Nombre
+            <input type="text" id="nombre" required />
+          </label>
+          
+          <label>
+            Apellidos
+            <input type="text" id="apellidos" required />
+          </label>
+          
+          <label>
+            Teléfono
+            <input type="tel" id="telefono" required />
+          </label>
+          
+          <label>
+            Email
+            <input type="email" id="email" required />
+          </label>
         </fieldset>
 
         <fieldset>
-          <legend>Presupuesto</legend>
-          <label>Producto:
-            <select id="producto">
-              <option value="100">Web Básica - 100€</option>
-              <option value="250">Tienda Online - 250€</option>
-              <option value="400">Sitio Corporativo - 400€</option>
+          <legend>Tipo de servicio</legend>
+          
+          <label>
+            Producto/Servicio
+            <select id="producto" required>
+              <option value="0">Selecciona un servicio</option>
+              <option value="500">Desarrollo web básico (500€)</option>
+              <option value="1000">Desarrollo web avanzado (1000€)</option>
+              <option value="750">Diseño UX/UI (750€)</option>
+              <option value="300">Soporte y mantenimiento (300€)</option>
             </select>
           </label>
 
-          <label>Plazo (meses): <input type="number" id="plazo" min="1" value="1"></label>
+          <label>
+            Plazo de entrega (meses)
+            <select id="plazo" required>
+              <option value="1">1 mes</option>
+              <option value="2">2 meses</option>
+              <option value="3">3 meses</option>
+              <option value="6">6 meses</option>
+            </select>
+          </label>
+        </fieldset>
 
+        <fieldset>
+          <legend>Extras</legend>
           <div class="extras">
-            <label><input type="checkbox" class="extra" value="20"> Hosting (+20€)</label>
-            <label><input type="checkbox" class="extra" value="50"> Mantenimiento (+50€)</label>
-            <label><input type="checkbox" class="extra" value="30"> SEO básico (+30€)</label>
-          </div>
-
-          <label>Presupuesto final: <output id="presupuesto">—</output> €</label>
-
-          <label><input type="checkbox" id="acepto"> Acepto las condiciones</label>
-
-          <div class="buttons">
-            <button type="submit">Enviar</button>
-            <button type="reset" id="resetBtn">Reset</button>
+            <label>
+              <input type="checkbox" class="extra" value="200" />
+              Diseño responsivo (+200€)
+            </label>
+            <label>
+              <input type="checkbox" class="extra" value="150" />
+              Optimización SEO (+150€)
+            </label>
+            <label>
+              <input type="checkbox" class="extra" value="100" />
+              Análisis de competencia (+100€)
+            </label>
+            <label>
+              <input type="checkbox" class="extra" value="50" />
+              Documentación técnica (+50€)
+            </label>
           </div>
         </fieldset>
-      </form>
 
-      <div id="form-messages" aria-live="polite"></div>
+        <div>
+          <strong>Presupuesto total:</strong>
+          <div id="presupuesto">0€</div>
+        </div>
+
+        <label>
+          <input type="checkbox" id="acepto" required />
+          Acepto las condiciones y términos de servicio
+        </label>
+
+        <div class="buttons">
+          <button type="submit">Solicitar presupuesto</button>
+          <button type="reset">Limpiar formulario</button>
+        </div>
+
+        <div id="form-messages"></div>
+      </form>
     </section>
   </main>
 
   <footer class="site-footer">
     <div>Dirección: Calle Falsa 123, Murcia</div>
-    <div>© Empresa inventada</div>
+    <div class="socials">
+      <a href="https://facebook.com" aria-label="facebook">Facebook</a>
+      <a href="https://twitter.com" aria-label="twitter">Twitter</a>
+      <a href="https://instagram.com" aria-label="instagram">Instagram</a>
+    </div>
+    <div>© Empresa inventada - Aviso legal</div>
   </footer>
 
   <script src="../js/presupuesto.js"></script>

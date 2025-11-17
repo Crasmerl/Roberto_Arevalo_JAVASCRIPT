@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let subtotal = (base + extrasSum) * months;
     let total = subtotal;
     total = Math.round(total*100)/100;
-    presupuestoOut.value = total;
+    presupuestoOut.textContent = total;
   }
 
   [producto,plazo,...extras].forEach(el => el.addEventListener('change', calcular));
