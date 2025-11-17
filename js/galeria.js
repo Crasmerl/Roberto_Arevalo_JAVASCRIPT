@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const gallery = document.getElementById('gallery');
   // imágenes de ejemplo (puedes sustituirlas por tus propias imágenes)
   const images = [
-    'images/photo1.jpg',
-    'images/photo2.jpg',
-    'images/photo3.jpg',
-    'images/photo4.jpg',
-    'images/photo5.jpg',
-    'images/photo6.jpg'
+    '../images/photo1.jpg',
+    '../images/photo2.jpg',
+    '../images/photo3.jpg',
+    '../images/photo4.jpg',
+    '../images/photo5.jpg',
+    '../images/photo6.jpg'
   ];
 
   images.forEach(src => {
